@@ -1,0 +1,18 @@
+<div class="container mt-3">
+    <br>
+    <div class="container bg-purple login-form">
+      <form (submit)="onSubmit()" class="container">
+        <div class="form-group container">
+          <input type="email" name="email" id="email" [(ngModel)]="email" class="form-control" placeholder="Email">
+          <br>
+          <input type="password" name="password" id="password" [(ngModel)]="password" class="form-control" placeholder="Password">
+          <br>
+          <input type="password" name="repassword" [(ngModel)]="repassword" id="repassword" class="form-control" placeholder="Re-Password">
+          <br>
+          <input type="submit" class="btn btn-submit" value="Sing Up">
+        </div>
+      </form>
+    </div>
+    <br>
+    <br>
+  </div>

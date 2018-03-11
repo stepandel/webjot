@@ -1,0 +1,19 @@
+<div class="navbar navbar-expand-lg bg-purple">
+  <div class="container">
+    <a routerLink="/" class="navbar-brand" id="logo">WebJot</a>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item" *ngIf="!isLoggedIn">
+        <a routerLink="/login" class="nav-link">Log In</a>
+      </li>
+      <li class="nav-item" *ngIf="!isLoggedIn">
+        <a routerLink="signup" class="nav-link">Sign Up</a>
+      </li>
+      <li class="nav-item" *ngIf="isLoggedIn">
+        <a routerLink="dashboard" class="nav-link">{{ loggedInUser }}</a>
+      </li>
+      <li class="nav-item" *ngIf="isLoggedIn">
+        <a href="#" (click)="onLogoutClick()" class="nav-link">Log Out</a>
+      </li>
+    </ul>
+  </div>
+</div>

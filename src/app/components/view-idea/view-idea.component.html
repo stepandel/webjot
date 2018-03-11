@@ -1,0 +1,25 @@
+<div class="container mt-5">
+  <a routerLink="/dashboard" class="btn btn-link">
+    <i class="fa fa-arrow-circle-o-left"></i> Back to Dashboard
+  </a>
+  <div class="jumbotron jumbotron-fluid">
+    <div *ngIf="idea" class="container">
+      <div class="dropdown">
+        <button [ngClass]="{'btn-primary': idea.status == 'Idea', 'btn-warning': idea.status === 'In-Progress', 'btn-success': idea.status === 'Deployed', 'btn-secondary': idea.status === 'In-Revision'}" class="btn dropdown-toggle" type="button" id="statusButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ idea.status }}</button>
+        <div class="dropdown-menu" aria-labelledby="statusButton">
+          <a (click)="updateStatus('Idea')" *ngIf="idea.status !== 'Idea'" class="dropdown-item btn">Idea</a>
+          <a (click)="updateStatus('In-Progress')" *ngIf="idea.status !== 'In-Progress'" class="dropdown-item btn">In-Progress</a>
+          <a (click)="updateStatus('Deployed')" *ngIf="idea.status !== 'Deployed'" class="dropdown-item btn">Deployed</a>
+          <a (click)="updateStatus('In-Revision')" *ngIf="idea.status !== 'In-Revision'" class="dropdown-item btn">In-Revision</a>
+        </div>
+      </div>
+      <h1 class="display-4">{{ idea.name }}</h1>
+      <p class="lead">{{ idea.description }}</p>
+      <hr class="my-4">
+      <p class="lead">
+        <a routerLink="/idea/edit/{{ idea.id }}" class="btn btn-submit"><i class="fa fa-pencil"></i> Edit</a>
+        <a (click)="onRemoveClick()" class="btn btn-danger"><i class="fa fa-times"></i> Remove</a>
+      </p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+<div class="row">
+    <div class="col-md-8 mx-auto">
+      <div class="container mt-3">
+        <br>
+        <div class="container bg-purple login-form">
+          <form #editIdeaForm="ngForm" (ngSubmit)="onSubmit(editIdeaForm)" class="container">
+            <div *ngIf="idea" class="form-group">
+              <label for="name">Name</label>
+              <input type="text" name="name" class="form-control" [(ngModel)]="idea.name" placeholder="{{ idea.name }}" required>
+            </div>
+            <div *ngIf="idea" class="form-group">
+              <label for="description">Description</label>
+              <textarea rows="4" cols="50" name="description" [(ngModel)]="idea.description" class="form-control" required>{{ idea.description }}</textarea>
+            </div>
+            <input type="submit" class="btn btn-submit" value="Save">
+          </form>
+        </div>
+        <br>
+        <br>
+      </div>
+    </div>
+  </div>

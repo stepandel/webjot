@@ -1,0 +1,47 @@
+.bg-purple {
+    background-color: #676C95;
+}
+
+.login-form {
+    padding: 2rem 2rem;
+    text-align: center;
+}
+
+.btn-submit {
+    display: block;
+    width: 50%;
+    background-color: #41466A;
+}
+
+#logo {
+    font-family: "Segoe UI";
+    color: #B2B2B2;
+}
+
+#about {
+    font-family: "Segoe UI";
+    color: #B2B2B2;
+    font-weight: normal;
+    font-weight: 58;
+    padding: 2rem;
+}
+
+#about-body {
+    font-family: "Segoe UI";
+    color: #B2B2B2;
+    font-size: 35;
+}
+
+.footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #676C95;
+    color: #B2B2B2;
+    text-align: left;
+    padding: 2rem 0rem;
+}
+
+.bg-form {
+    background-color: #8B8FAE;
+}

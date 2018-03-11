@@ -1,0 +1,15 @@
+.status-warning {
+    color: #ffc107;
+}
+
+.status-success {
+    color: #28a745;
+}
+
+.status-secondary {
+    color: #6c757d;
+}
+
+.status-primary {
+    color: #007bff;
+}
