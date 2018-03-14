@@ -1,0 +1,127 @@
+$background-color:rgba(103,108,152,1);
+$font-color:#f8f9fa;
+$primary-color:#fff;
+$overlay:rgba(0,0,0,0.7);
+$icon-size:20px;
+
+
+nav {
+    background-color:$background-color;
+    color:$font-color;
+    border-bottom:$primary-color 3px solid;
+    opacity:0.8;
+}
+
+#home-section {
+    background:url('./assets/images/home2.jpeg') no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+    min-height:700px;
+
+    .overlay{
+        background-color:$overlay;
+        position:absolute;
+        top:0;
+        left:0;
+        width:100%;
+        min-height:700px;
+    }
+
+    .home-inner{
+        padding-top:150px;
+    }
+
+    .login-button-group{
+        padding-top:300px;
+        padding-right:150px;
+    }
+}
+
+#about-section{
+    .fa{
+        color:#fff;
+        background:#333;
+        padding:3px;
+        border-radius:5px;
+        font-size:$icon-size;
+    }
+}
+
+#main-footer{
+    background-color:$background-color;
+    color:$font-color;
+    opacity:0.8;
+
+    .nav-link{
+        color:$font-color;
+    }
+}
+
+.btn-purple{
+    background-color:$background-color;
+    color:$font-color;
+}
+.btn-purple:hover{
+    color: #fff;
+    background-color: #343a69;
+    border-color: #343a69;
+}
+
+#login-section{
+    padding-top:150px;
+    padding-bottom:150px;
+
+    .card-header{
+        background-color:$background-color;
+        opacity:0.7;
+        color: $font-color;
+    }
+}
+
+#signup-section{
+    padding-top:150px;
+    padding-bottom:100px;
+
+    .card-header{
+        background-color:$background-color;
+        opacity:0.7;
+        color: $font-color;
+    }
+}
+
+#flash-messages{
+    margin-top:75px;
+    background-color:rgba(0,0,0,0);
+    position: fixed;
+    width:100%;
+    
+}
+
+#ideas{
+    padding-top:150px;
+
+    .header-link:hover{
+        text-decoration:none;
+    }
+}
+
+#view-idea{
+    padding-top:100px;
+}
+
+#idea-form{
+    padding-top:100px;
+    padding-bottom:100px;
+
+    .card-header{
+        background-color:$background-color;
+        opacity:0.7;
+        color:$font-color;
+    }
+}
+
+.modal{
+    padding-top:70px;
+}
+
+

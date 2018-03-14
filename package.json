@@ -24,9 +24,10 @@
     "angular2-flash-message": "^1.0.2",
     "angular2-flash-messages": "^2.0.5",
     "angularfire2": "^5.0.0-rc.6",
-    "bootstrap": "4.0.0",
+    "bootstrap": "^4.0.0",
     "core-js": "^2.4.1",
     "firebase": "^4.10.1",
+    "firebase-tools": "^3.17.6",
     "font-awesome": "^4.7.0",
     "jquery": "^3.3.1",
     "jquery.js": "0.0.2-security",
@@ -35,7 +36,7 @@
     "zone.js": "^0.8.19"
   },
   "devDependencies": {
-    "@angular/cli": "~1.7.1",
+    "@angular/cli": "^1.7.3",
     "@angular/compiler-cli": "^5.2.0",
     "@angular/language-service": "^5.2.0",
     "@types/jasmine": "~2.8.3",

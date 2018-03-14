@@ -1,18 +1,63 @@
-<div class="container mt-3">
-    <br>
-    <div class="container bg-purple login-form">
-      <form (submit)="onSubmit()" class="container">
-        <div class="form-group container">
-          <input type="email" name="email" id="email" [(ngModel)]="email" class="form-control" placeholder="Email">
-          <br>
-          <input type="password" name="password" id="password" [(ngModel)]="password" class="form-control" placeholder="Password">
-          <br>
-          <input type="password" name="repassword" [(ngModel)]="repassword" id="repassword" class="form-control" placeholder="Re-Password">
-          <br>
-          <input type="submit" class="btn btn-submit" value="Sing Up">
+<section id="signup-section">
+
+    <div class="container">
+      <div class="card text-center">
+        <div class="card-header">
+          Sign Up
         </div>
-      </form>
+        <div class="card-body">
+          <div class="container p-5">
+            <form (submit)="onSubmit()">
+              <div class="form-group container">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  class="form-control"
+                  #userEmail="ngModel"
+                  [ngClass]="{'is-invalid': userEmail.errors && userEmail.touched}"
+                  [(ngModel)]="email"
+                  placeholder="Email"
+                  required
+                >
+                <div class="invalid-feedback">
+                  Email is required
+                </div>
+                <br>
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  class="form-control"
+                  #userPassword="ngModel"
+                  [ngClass]="{'is-invalid': userPassword.errors && userPassword.touched}"
+                  [(ngModel)]="password"
+                  placeholder="Password"
+                  required
+                  minlength="6"
+                >
+                <div [hidden]="!userPassword.errors?.required" class="invalid-feedback">
+                  Password is required
+                </div>
+                <div [hidden]="!userPassword.errors?.minlength" class="invalid-feedback">
+                  Password is too short
+                </div>
+                <br>
+                <input
+                  type="password"
+                  name="repassword"
+                  id="repassword"
+                  class="form-control"
+                  [(ngModel)]="repassword"
+                  placeholder="Re-Password"
+                >
+                <br>
+                <input type="submit" class="btn btn-purple btn-block" value="Log In">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
-    <br>
-    <br>
-  </div>
+  
+  </section>

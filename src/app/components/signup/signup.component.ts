@@ -25,7 +25,9 @@ export class SignupComponent implements OnInit {
 
   onSubmit(){
     if(this.password !== this.repassword){
-      alert("Passwords do not match!");
+      this.flashMessage.show("Passwords do not match!", {
+        cssClass: 'alert-danger', timeout: 4000
+      });
     } else {
       this.authService.signup(this.email, this.password).then(res => {
         this.flashMessage.show('You are registered and logged in!', {
@@ -34,7 +36,9 @@ export class SignupComponent implements OnInit {
         this.router.navigate(['/dashboard']);
       })
       .catch(err => {
-        alert(err);
+        this.flashMessage.show("Form is filled up incorrectly!", {
+          cssClass: 'alert-danger', timeout:4000
+        });
       });
     }
   }

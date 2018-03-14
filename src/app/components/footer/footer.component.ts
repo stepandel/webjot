@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../services/auth.service';
+import { MessageService } from '../../services/message.service';
+
+import { Message } from '../../models/Message';
 
 @Component({
   selector: 'app-footer',
@@ -8,9 +11,15 @@ import { AuthService } from '../../services/auth.service';
 })
 export class FooterComponent implements OnInit {
   isLoggedIn: boolean;
+  message: Message = {
+    name: '',
+    email: '',
+    message: ''
+  }
 
   constructor(
-    private authService: AuthService
+    private authService: AuthService,
+    private messageService: MessageService
   ) { }
 
   ngOnInit() {
@@ -21,6 +30,13 @@ export class FooterComponent implements OnInit {
         this.isLoggedIn = false;
       }
     })
+  }
+
+  onSubmit({value,valid}: {value: Message, valid: boolean}){
+    console.log(this.message);
+    if(valid){
+      this.messageService.newMessage(this.message);
+    }
   }
 
 }

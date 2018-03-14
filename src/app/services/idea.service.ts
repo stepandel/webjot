@@ -21,7 +21,7 @@ export class IdeaService {
   }
 
   getIdeas(user: string): Observable<Idea[]> {
-    this.userIdeas = this.afs.collection(`users/${user}/ideas`).snapshotChanges().map(changes => {
+    this.userIdeas = this.afs.collection(`users/${user}/ideas`, ref => ref.orderBy('date','asc')).snapshotChanges().map(changes => {
       return changes.map(action => {
         const data = action.payload.doc.data() as Idea;
         data.id = action.payload.doc.id;

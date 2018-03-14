@@ -44,6 +44,7 @@ export class AddIdeaComponent implements OnInit {
       this.flashMessage.show('New idea has been added!', {
         cssClass: 'alert-success', timeout: 4000
       });
+      console.log(this.idea);
       // Add idea to DB
       this.ideaService.newIdea(this.idea.user, this.idea);
       // Redirect to Dashboard

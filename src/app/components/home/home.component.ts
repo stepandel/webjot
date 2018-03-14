@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import * as $ from 'jquery';
+import { AuthService } from '../../services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -9,11 +10,19 @@ import * as $ from 'jquery';
 export class HomeComponent implements OnInit {
   homeImage: String;
 
-  constructor() {
+  constructor(
+    private authService: AuthService,
+    private router: Router
+  ) {
     this.homeImage = 'assets/images/home2.jpeg';
    }
 
   ngOnInit() {
+    this.authService.getAuth().subscribe(auth => {
+      if(auth){
+        this.router.navigate(['/dashboard']);
+      }
+    });
   }
 
 }

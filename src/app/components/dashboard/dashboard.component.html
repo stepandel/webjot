@@ -1,14 +1,18 @@
-<div class="container mt-3">
-  <button routerLink="/idea/add" class="btn btn-submit mb-3">New Idea</button>
-  <div>
-    <div class="jumbotron jumbotron-fluid">
-      <div class="container" *ngFor="let idea of ideas">
-        <h1 class="display-4"><a routerLink="/idea/view/{{idea.id}}">{{ idea.name }}</a></h1>
+<section id="ideas">
+
+<div class="container">
+
+    <button routerLink="/idea/add" class="btn btn-block btn-purple mb-3">New Idea</button>
+    
+    <div class="jumbotron"  *ngFor="let idea of ideas">
+      <div class="container">
+        <h1 class="display-4"><a class="text-secondary header-link" routerLink="/idea/view/{{idea.id}}">{{ idea.name }}</a></h1>
         <p class="lead">{{ idea.description }}</p>
-        <h4>Status: <span [ngClass]="{'status-secondary': idea.status === 'In-Revision', 'status-warning': idea.status === 'In-Progress','status-primary': idea.status === 'Idea' , 'status-success': idea.status === 'Deployed'}">{{ idea.status }}</span></h4>
-        <br>
         <hr>
+        <h4>Status: <span [ngClass]="{'status-secondary': idea.status === 'In-Revision', 'status-warning': idea.status === 'In-Progress','status-primary': idea.status === 'Idea' , 'status-success': idea.status === 'Deployed'}">{{ idea.status }}</span></h4>
       </div>
     </div>
-  </div>
+
 </div>
+
+</section>

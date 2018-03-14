@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
       if(auth){
         this.router.navigate(['/dashboard']);
       }
-    })
+    });
   }
 
   onSubmit(){
@@ -34,7 +34,9 @@ export class LoginComponent implements OnInit {
       this.router.navigate(['/dashboard']);
     })
     .catch(err => {
-      alert(err);
+      this.flashMessage.show("Entered credentials do not match any existing record", {
+        cssClass: 'alert-danger', timeout: 4000
+      });
     });
   }
 

@@ -23,6 +23,7 @@ import { ViewIdeaComponent } from './components/view-idea/view-idea.component';
 import { EditIdeaComponent } from './components/edit-idea/edit-idea.component';
 import { AuthService } from './services/auth.service';
 import { IdeaService } from './services/idea.service';
+import { MessageService } from './services/message.service';
 
 
 @NgModule({
@@ -50,7 +51,8 @@ import { IdeaService } from './services/idea.service';
   ],
   providers: [
     AuthService,
-    IdeaService
+    IdeaService,
+    MessageService
   ],
   bootstrap: [AppComponent]
 })

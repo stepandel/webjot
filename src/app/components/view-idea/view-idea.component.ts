@@ -39,7 +39,7 @@ export class ViewIdeaComponent implements OnInit {
   onRemoveClick() {
     if(confirm('Are you sure?')){
       this.ideaService.deleteIdea(this.loggedInUser, this.idea);
-      this.flashMessage.show('Idea has been deleted', {
+      this.flashMessage.show('Idea has been removed', {
         cssClass: 'alert-danger', timeout: 4000
       });
       this.router.navigate(['/dashboard']);
