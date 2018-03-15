@@ -9,3 +9,7 @@ WebJot is idea tracker build as my first website for experience purposes origina
 The data is managed via NoSQL databse hosted on Firebase server. Latest production virsion is deployed here:
 https://webjot-prod.firebaseapp.com
 
+## Licence
+
+This project is licensed under the MIT License
+
