@@ -4,9 +4,15 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## About
 
-WebJot is idea tracker build as my first website for experience purposes originally serving as a tracker of ideas for my portfolio
+WebJot is a project progress tracker for websites and apps.
 
-The data is managed via NoSQL databse hosted on Firebase server. Latest production virsion is deployed here:
+The application is build with Angular 5 and Firebase NoSQL database.
+
+It is a fully responsive UI build with Bootstrap.
+
+It uses native authentication and communicates with the user via Flash Messages.
+
+Latest production virsion is deployed here:
 https://webjot-prod.firebaseapp.com
 
 ## Licence
